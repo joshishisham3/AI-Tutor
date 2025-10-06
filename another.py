@@ -45,3 +45,10 @@ if name:
 
         else:
             st.error("Oops! Try again.")
+         # --- Score and Next Question ---
+    st.write(f"⭐ Your Score: {st.session_state.score}")
+
+    if st.button("Next Question"):
+        st.session_state.score = 0
+        st.experimental_rerun()
+
